@@ -1,0 +1,12 @@
+---
+title: Blogs
+layout: default
+---
+
+<div class="jumbotron">
+  <div class="list-group">
+  {% for post in site.posts %}
+      <a class="list-group-item list-group-item-action" href="{{ post.url }}">{{ post.title }}</a>
+  {% endfor %}
+</div>
+</div>
