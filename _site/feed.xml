@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-07T00:41:58+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">How to build a jekyll website</title><link href="http://localhost:4000/jekyll/update/2020/06/06/how-this-website-works.html" rel="alternate" type="text/html" title="How to build a jekyll website" /><published>2020-06-06T14:00:00+02:00</published><updated>2020-06-06T14:00:00+02:00</updated><id>http://localhost:4000/jekyll/update/2020/06/06/how-this-website-works</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/06/06/how-this-website-works.html">&lt;h1 id=&quot;how-to-build-a-jekyll-website&quot;&gt;How to build a jekyll website&lt;/h1&gt;
+&lt;p&gt;This website was build using the jekyll static site generator, the bootstrap framework, and the fontawesome icon library. In this post I will discuss the basic of these tools and how to quickly get started with building your own static websites.&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
+&lt;p&gt;Jekyll was build by the creators of github and allows its users to quickly build static websites without having to copy past every change to your default layout to each page. Furthermore Jekyll is blog aware, which means that you can easily add a blog page listing all of you blogs, with links to each blog post.&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-started&quot;&gt;Getting started&lt;/h3&gt;
+&lt;p&gt;Follow these steps to get Jekyll setup on you local machine:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot; target=&quot;_blank&quot;&gt;Install Jekyll&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/&quot; target=&quot;_blank&quot;&gt;Create a Project and Run the Server&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now you will have a server running Jekyll, you can visit it by typing localhost:4000 into your browser. Every time you update one of the layouts or pages the website will automatically update. All you have to do to see your results is reload the page.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, if you check out the content of your newly created project it should look similar to this:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;├── 404.html
+├── Gemfile
+├── Gemfile.lock
+├── _config.yml
+├── _layouts
+│   ├── blog.html
+│   └── default.html
+├── _posts
+│   ├── 2020-06-04-welcome-to-jekyll.markdown
+│   └── 2020-06-06-how-this-website-works.markdown
+├── _site
+│   ├── 404.html
+│   ├── about.html
+│   ├── assets
+│   │   ├── main.css
+│   │   ├── main.css.map
+│   │   └── minima-social-icons.svg
+│   ├── bg.jpeg
+│   ├── blogs.html
+│   ├── feed.xml
+│   ├── index.html
+│   ├── jekyll
+│   │   └── update
+│   │       └── 2020
+│   │           └── 06
+│   │               ├── 04
+│   │               │   └── welcome-to-jekyll.html
+│   │               └── 06
+│   │                   └── how-this-website-works.html
+│   └── test.css
+├── about.html
+├── bg.jpeg
+├── blogs.html
+├── index.html
+└── test.css
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can ingnore the gem files and &lt;code class=&quot;highlighter-rouge&quot;&gt;config.yaml&lt;/code&gt; for now and focuss on the fact that you have several &lt;code class=&quot;highlighter-rouge&quot;&gt;.html&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;.markdown&lt;/code&gt; files and three directories: &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;_layout&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; directory contains your static website and will be automatically updated when you are running the &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; command. These are the files that your browser will receive when it requests the website.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;_layout&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory contain the page layouts and posts, respectively. The layout files use a syntax called &lt;a href=&quot;https://shopify.github.io/liquid/&quot; target=&quot;_blank&quot;&gt;Liquid&lt;/a&gt; which is a templating language. The post files most often use a typesetting language called &lt;a href=&quot;https://en.wikipedia.org/wiki/Markdown&quot; target=&quot;_blank&quot;&gt;Markdown&lt;/a&gt;, this is a simplified syntax for using HTML. The specific flavour being used by Jekyll is called &lt;a href=&quot;https://jekyllrb.com/docs/configuration/markdown/#kramdown&quot; target=&quot;_blank&quot;&gt;Kramdown&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;.html&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;.markdown&lt;/code&gt; files correspond to the main pages on the website. These files will be completed by using one of the layouts in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_layouts&lt;/code&gt; directory. Both HTML as Markdown are supported, but you will have to make sure that if you use Markdown that the Markdown text lands in a text friendly place in your layout files because you should have to define tags such as &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;&lt;/code&gt; in the Markdown, which would be acceptable in a HTML file. If you have a look at one of these files you will see a head similiar to this:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+title: Home 
+layout: default
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This is the front matter/meta data of the page, it doesn’t necessarily add anything to the context of the page. But it tells Liquid how to interpret the page.&lt;/p&gt;
+
+&lt;h3 id=&quot;working-with-layouts&quot;&gt;Working With Layouts&lt;/h3&gt;
+&lt;p&gt;The advantage of layouts is not having to make a single change in every page file every time you want to change something like a navigation bar or a background. Which is a tedious and error prone job. Instead you can place all of the common elements into a single layout file and then drop in all of the page specific content using Liquid syntax. Furthermore, Liquid supports refering to different attributes of you page which can be defined in the front matter of each specific page.&lt;/p&gt;
+
+&lt;p&gt;In the most basic format a layout page would look like this:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Required meta tags --&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Mike Vosskuhler | {{page.title}}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+
+{{ content }}
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here you can see the front matter/metadata being queried with &lt;code class=&quot;highlighter-rouge&quot;&gt;{{page.title}}&lt;/code&gt;, which refers to the title defined in the front matter. Furthermore, the text below the front matter block in the page file will be dropped into the &lt;code class=&quot;highlighter-rouge&quot;&gt;{{ content }}&lt;/code&gt; placeholders place.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;There are much more options to use with Liquid, you can even loop over all the pages or build if else statements, however, this is a good basic example of what it can do for you.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;working-with-pages&quot;&gt;Working With Pages&lt;/h3&gt;
+&lt;p&gt;To build a new page all you have to do is create a new file in the main root directory of you project ending in &lt;code class=&quot;highlighter-rouge&quot;&gt;.html&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;.markdown&lt;/code&gt;. You will have to add the front matter to this file, here is an minimal example of what that should look like:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+title: Home 
+layout: default
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The title object can be retrieved using Liquid syntax in the layout template, while the layout determines which layout will be used from the &lt;code class=&quot;highlighter-rouge&quot;&gt;_layouts&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;p&gt;Anything you put below this section will be mapped to the &lt;code class=&quot;highlighter-rouge&quot;&gt;{{ content }}&lt;/code&gt; statement in the layout template.&lt;/p&gt;
+
+&lt;h3 id=&quot;working-with-posts&quot;&gt;Working With Posts&lt;/h3&gt;
+&lt;p&gt;Posts are treated a bit differently, you can create them by adding a &lt;code class=&quot;highlighter-rouge&quot;&gt;.html&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;.markdown&lt;/code&gt; file to the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. This file should have front matter as well, but it takes different arguments:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: blog
+title:  &quot;How to build a jekyll website&quot;
+date:   2020-06-06 14:00:00 +0200
+categories: jekyll update
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Just like with the regular pages everything that comes after the front matter will be dropped into the &lt;code class=&quot;highlighter-rouge&quot;&gt;{{ content }}&lt;/code&gt; place in the layout&lt;/p&gt;
+
+&lt;p&gt;Now you would probably like to have a overview page where visitors can view all of you blogs in one central place. To do so you can use a little bit of Liquid syntax to get a list of posts on one of you main pages. This what the syntax looks like:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+  
+      &amp;lt;li&amp;gt;&amp;lt;a href=&quot;/jekyll/update/2020/06/06/how-this-website-works.html&quot;&amp;gt;How to build a jekyll website&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  
+      &amp;lt;li&amp;gt;&amp;lt;a href=&quot;/jekyll/update/2020/06/04/welcome-to-jekyll.html&quot;&amp;gt;Welcome to Jekyll!&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Later on we will discuss how to get a nicer looking format using bootstrap.&lt;/p&gt;
+
+&lt;h2 id=&quot;bootstrap&quot;&gt;Bootstrap&lt;/h2&gt;
+&lt;p&gt;Bootstrap is a framework that allows you to build a nice looking responsive website is very little time. 
+Here is what you need to get started:&lt;/p&gt;
+&lt;h3 id=&quot;the-barebones-template&quot;&gt;The Barebones Template&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Required meta tags --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Bootstrap CSS --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;integrity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;crossorigin=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;anonymous&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Hello, world!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Hello, world!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Optional JavaScript --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://code.jquery.com/jquery-3.5.1.slim.min.js&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;integrity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;crossorigin=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;anonymous&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;integrity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;crossorigin=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;anonymous&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;integrity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;crossorigin=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;anonymous&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This template contains all of the scripts and ccs links needed to use bootstrap. You can replace the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;h1&amp;gt;Hello, world!&amp;lt;/h1&amp;gt;&lt;/code&gt; syntax with any content you want to display on you page.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-components&quot;&gt;The Components&lt;/h3&gt;
+&lt;p&gt;You can very easily add in bootstrap components to you html documents. For example, if you want to grab some attention you can use a jumbotron component:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div class=&quot;jumbotron&quot;&amp;gt;
+&amp;lt;h1&amp;gt;Hello from inside the Jumbotron&amp;lt;/h1&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This is a basic example but you could do much more with these components, Here is a link to a list of all the components available in bootstrap: &lt;a href=&quot;https://getbootstrap.com/docs/4.5/components/&quot; target=&quot;_blank&quot;&gt;Documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;fontawesome&quot;&gt;FontAwesome&lt;/h2&gt;
+&lt;p&gt;Font Awesome is a much smaller tool, but it can be very usefull when you are looking to add some nice icons to you HTML. You can use it by creating a free account on the &lt;a href=&quot;https://fontawesome.com&quot; target=&quot;_blank&quot;&gt;Font Awesome Website&lt;/a&gt;. This will give you access to the &lt;a href=&quot;https://fontawesome.com&quot; target=&quot;_blank&quot;&gt;Kit overview&lt;/a&gt;. Add the script for you kit to the head of you HTML document and you are ready to go. Now you can add icons to any text field on you page simply by including the icon syntax to you page, for example:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;i class=&quot;fab fa-blogger-b&quot;&amp;gt;&amp;lt;/i&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;You can find all kinds of icons using the &lt;a href=&quot;https://fontawesome.com/icons?d=gallery&amp;amp;q=blog&amp;amp;m=free&quot; target=&quot;_blank&quot;&gt;Icon overview&lt;/a&gt; on the Font Awesome website.&lt;/p&gt;
+
+&lt;h1 id=&quot;this-website&quot;&gt;This Website&lt;/h1&gt;
+&lt;p&gt;I used the same methods described in this blog post to create this website. You can find the source code for this website on my github&lt;/p&gt;</content><author><name></name></author><summary type="html">How to build a jekyll website This website was build using the jekyll static site generator, the bootstrap framework, and the fontawesome icon library. In this post I will discuss the basic of these tools and how to quickly get started with building your own static websites.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2020/06/04/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-06-04T00:51:15+02:00</published><updated>2020-06-04T00:51:15+02:00</updated><id>http://localhost:4000/jekyll/update/2020/06/04/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/06/04/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
