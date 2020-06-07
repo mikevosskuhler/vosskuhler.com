@@ -181,4 +181,6 @@ Font Awesome is a much smaller tool, but it can be very usefull when you are loo
 You can find all kinds of icons using the [Icon overview](https://fontawesome.com/icons?d=gallery&q=blog&m=free){:target="_blank"} on the Font Awesome website. 
 
 # This Website
-I used the same methods described in this blog post to create this website. You can find the source code for this website on my github 
+I used the same methods described in this blog post to create this website. You can find the source code for this website on my github. 
+
+<button type="button" class="btn btn-outline-secondary" onclick="window.open('https://github.com/mikevosskuhler/vosskuhler.com')"><i class="fab fa-github"></i> Source Code</button>
