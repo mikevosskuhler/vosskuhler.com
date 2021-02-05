@@ -9,8 +9,10 @@ This website was build using the jekyll static site generator, the bootstrap fra
 
 ## Create a link to the file in your blog post
 ```
+{% raw  %}
 {{ site.url }}/downloads/<your file name>
+{% endraw %}
 ```
 
 ## Working example
-{{ site.url }}/downloads/hello
+[download link]({{ site.url }}/downloads/hello.bin)
