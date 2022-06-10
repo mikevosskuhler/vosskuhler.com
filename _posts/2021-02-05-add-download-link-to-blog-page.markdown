@@ -16,3 +16,4 @@ This website was build using the jekyll static site generator, the bootstrap fra
 
 ## Working example
 [download link]({{ site.url }}/downloads/hello.bin)
+[download link]({{ site.url }}/downloads/cabfile.diagcab)
