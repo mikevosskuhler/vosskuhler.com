@@ -15,6 +15,5 @@ This website was build using the jekyll static site generator, the bootstrap fra
 ```
 
 ## Working example
-[download link]({{ site.url }}/downloads/hello.bin)
-[download link]({{ site.url }}/downloads/cabfile.diagcab)
-[download link]({{ site.url }}/downloads/cabfile.mini.diagcab)
+[download link - macos]({{ site.url }}/downloads/hello.bin)
+[download link - linux]({{ site.url }}/downloads/hello_world)
